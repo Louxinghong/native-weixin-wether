@@ -1,0 +1,53 @@
+{
+  "pages": ["pages/index/index", "pages/logs/logs", "pages/test/test"],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#FF0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "天气",
+        "iconPath": "./images/tab_wether.png",
+        "selectedIconPath": "./images/tab_wether_selected.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "./images/tab_logs.png",
+        "selectedIconPath": "./images/tab_logs_selected.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试",
+        "iconPath": "./images/tab_test.png",
+        "selectedIconPath": "./images/tab_test_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "vButton": "/miniprogram_npm/vant-weapp/button/index",
+    "vToast": "/miniprogram_npm/vant-weapp/toast/index",
+    "vSearch": "/miniprogram_npm/vant-weapp/search/index",
+    "vDropdownMenu": "/miniprogram_npm/vant-weapp/dropdown-menu/index",
+    "vDropdownItem": "/miniprogram_npm/vant-weapp/dropdown-item/index",
+    "vActionSheet": "/miniprogram_npm/vant-weapp/action-sheet/index",
+    "vIcon": "/miniprogram_npm/vant-weapp/icon/index",
+    "vTag": "/miniprogram_npm/vant-weapp/tag/index",
+    "vRow": "/miniprogram_npm/vant-weapp/row/index",
+    "vCol": "/miniprogram_npm/vant-weapp/col/index",
+    "vLoading": "/miniprogram_npm/vant-weapp/loading/index"
+  }
+}

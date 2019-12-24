@@ -1,0 +1,105 @@
+<!--index.wxml-->
+<view class="container" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove">
+  <image class='background' src="../../images/bg.jpg" mode="aspectFill"></image>
+  <!--<view class="userinfo" wx:if="{{ hasUserInfo }}">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" mode="cover"></image>
+    <vIcon class="setting" name="setting-o" bind:tap="onShowActions"></vIcon>
+    <vActionSheet show="{{ showActions }}" actions="{{ actions }}" bind:close="onCloseActions" bind:select="onSelectActions"></vActionSheet>
+  </view>
+  
+  <view class="demoInfo {{ moveY < 0 ? 'demoInfo-down' : 'demoInfo-up' }}">
+    <view class="title">
+      <vButton type="info" wx:if="{{ !hasUserInfo && canIUse }}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">戳一下</vButton>
+      <text class="author">Created By Xiaohong</text>
+    </view>
+  </view>-->
+  <view class="information">
+    <view class="location">
+      <view wx:if="{{ hasLocationInfo }}">
+        <vIcon name="location-o"></vIcon>
+        <text>{{ locationInfo.nation }}</text>
+        <text>{{ locationInfo.province }}</text>
+        <text>{{ locationInfo.city }}</text>
+        <text>{{ locationInfo.district }}</text>
+      </view>
+      <view wx:else>
+        <vIcon name="location-o"></vIcon>
+        <text>无法获取当前地理位置，请前往授权中心</text>
+      </view>
+    </view>
+
+    <!--<vButton type="primary" bindtap="chooseLoaction">获取当前位置</vButton>-->
+    <!--<text bindtap="lookGet">授权中心</text>-->
+    <!--此处添加vToast相当于一个占位符-->
+    <vToast id="van-toast"></vToast>
+
+    <vSearch label="城市" value="{{ searchCity }}" placeholder="请输入需查询的城市名称" use-action-slot bind:change="onChangeCity">
+      <view slot="action" bind:tap="onSearchCity">搜索</view>
+    </vSearch>
+
+    <view class="loading" wx:if="{{ loading }}">
+      <vLoading color="#1989fa" size="100rpx"></vLoading>
+    </view>
+
+    <view class="wether" wx:for="{{ daysInfo }}" wx:for-item="item" wx:for-index="index" wx:key="{{ index }}">
+      <view class="wether-today" wx:if="{{ index === 0 }}">
+        <view class="tem-now">
+          <text>{{ item.tem }}</text>
+        </view>
+        <view class="wether-now">
+          <image class="wether-now-image" src="../../images/{{ item.wea_img }}.png"></image>
+          <vTag round size="large">{{ item.wea }}</vTag>
+        </view>
+        <view class="date-tem">
+            <text>{{ item.week }}</text>
+            <text>{{ item.day }}</text>
+            <text>白天：{{ item.tem1 }}</text>
+            <text>晚上：{{ item.tem2 }}</text>
+        </view>
+        <view class="quality" wx:if="{{ item.air > 0 }}">
+          <text>空气质量：</text>
+          <view class="quality-content" wx:if="{{ item.air > 0 && item.air <= 50 }}">
+            <vTag color="green" size="large">{{ item.air_level }}</vTag>
+          </view>
+          <view class="quality-content" wx:if="{{ item.air > 50 && item.air <= 100 }}">
+            <vTag color="yellow">{{ item.air_level }}</vTag>
+          </view>
+          <view class="quality-content" wx:if="{{ item.air > 100 && item.air <= 150 }}">
+            <vTag color="orange">{{ item.air_level }}</vTag>
+          </view>
+          <view class="quality-content" wx:if="{{ item.air > 151 }}">
+            <vTag color="crimson">{{ item.air_level }}</vTag>
+          </view>
+        </view>
+        <view class="quality-desc">
+          <em>{{ item.air_tips }}</em>
+        </view>
+        
+        <view class="wether-hours">
+          <scroll-view class="wether-hours-content" scroll-x="true">
+            <view class="hour" wx:for="{{ item.hours }}" wx:for-item="item" wx:for-index="index" wx:key="{{ index }}">
+              <view class="hour-day">{{ item.day }}</view>
+              <view>
+                <image class="hour-wea-img" src="{{ item.wea_img }}"></image>
+              </view>
+              <view class="hour-wea">
+                <vTag plain type="warning" size="large">{{ item.wea }}</vTag>
+              </view>
+              <view class="hour-win">{{ item.win }}{{ item.win_speed }}</view>
+              <view class="hour-tem">{{ item.tem }}</view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="wether-next-six" wx:else>
+        <view class="date-next">{{ item.day }}</view>
+        <view class="wea_img-next">
+          <image class="wea_img-next-content" src="../../images/{{ item.wea_img }}.png"></image>
+        </view>
+        <view class="wea-next">{{ item.wea }}</view>
+        <view class="tem-day-next">{{ item.tem1 }}</view>
+        <view class="tem-night-next">{{ item.tem2 }}</view>
+      </view>
+    </view>
+  </view>
+</view>
