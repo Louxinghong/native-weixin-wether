@@ -307,11 +307,23 @@ Page({
           });
         } else {
           this.setData({
-            hasLocationInfo: false
+            hasLocationInfo: false,
+            locationInfo: {
+              nation: "",
+              province: "",
+              city: "",
+              districe: "",
+              street: "",
+              street_number: ""
+            },
+            wetherInfo: {},
+            daysInfo: []
           });
         }
       },
-      fail: () => {},
+      fail: err => {
+        console.log(err);
+      },
       complete: () => {}
     });
   },
