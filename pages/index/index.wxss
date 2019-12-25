@@ -35,11 +35,6 @@
   border-radius: 50%;
 }
 
-.setting {
-  width: 80rpx !important;
-  height: 80rpx;
-}
-
 .demoInfo {
   margin-bottom: 20rpx;
 }
@@ -61,6 +56,20 @@
   padding: 10rpx 0;
   margin: 0 0 10rpx;
   border-bottom: 2px solid #ffffff;
+}
+
+.location {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting {
+  width: 80rpx;
+  height: 80rpx;
+  float: right;
 }
 
 .loading {
@@ -93,9 +102,8 @@
   justify-content: space-between;
   align-items: center;
   color: rgb(136, 136, 136);
-  margin-top: 20rpx;
-  padding-bottom: 15rpx;
-  border-bottom: 2rpx solid rgb(136, 136, 136);
+  margin-top: 60rpx;
+  /* padding-bottom: 15rpx; */
 }
 
 .wether .wether-today .quality {
@@ -103,7 +111,7 @@
   flex-flow: row nowrap;
   align-items: center;
   font-size: 35rpx;
-  margin-top: 20rpx;
+  /* margin-top: 20rpx; */
 }
 
 /* .wether .wether-today .quality .quality-content {
@@ -112,19 +120,17 @@
 .wether .wether-today .quality-desc {
   color: rgb(136, 136, 136);
   margin-top: 20rpx;
-  padding-bottom: 15rpx;
-  border-bottom: 2rpx solid rgb(136, 136, 136);
+  /* padding-bottom: 15rpx; */
 }
 
-.wether .wether-today .wether-hours {
+/* .wether .wether-today .wether-hours {
   padding-bottom: 15rpx;
-  border-bottom: 2rpx solid rgb(136, 136, 136);
-}
+} */
 
 .wether .wether-today .wether-hours .wether-hours-content {
   white-space: nowrap;
   display: flex;
-  margin-top: 20rpx;
+  /* margin-top: 20rpx; */
 }
 
 .wether .wether-today .wether-hours .wether-hours-content .hour {
@@ -191,4 +197,12 @@
 .wether .wether-next-six .tem-night-next {
   width: 15%;
   text-align: center;
+}
+
+.other-desc-content {
+  margin-top: 20rpx;
+}
+
+.panel-content {
+  padding: 20rpx;
 }

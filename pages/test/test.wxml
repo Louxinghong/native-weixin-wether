@@ -1,1 +1,3 @@
-<text>Hello world</text>
+<view class="container">
+  <text class="title">别看了，啥也没有，憨憨。</text>
+</view>

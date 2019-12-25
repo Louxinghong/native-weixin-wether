@@ -3,8 +3,6 @@
   <image class='background' src="../../images/bg.jpg" mode="aspectFill"></image>
   <!--<view class="userinfo" wx:if="{{ hasUserInfo }}">
     <image bindtap="bindViewTap" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" mode="cover"></image>
-    <vIcon class="setting" name="setting-o" bind:tap="onShowActions"></vIcon>
-    <vActionSheet show="{{ showActions }}" actions="{{ actions }}" bind:close="onCloseActions" bind:select="onSelectActions"></vActionSheet>
   </view>
   
   <view class="demoInfo {{ moveY < 0 ? 'demoInfo-down' : 'demoInfo-up' }}">
@@ -26,6 +24,9 @@
         <vIcon name="location-o"></vIcon>
         <text>无法获取当前地理位置，请前往授权中心</text>
       </view>
+
+      <vIcon class="setting" name="setting-o" bind:tap="onShowActions"></vIcon>
+      <vActionSheet show="{{ showActions }}" actions="{{ actions }}" bind:close="onCloseActions" bind:select="onSelectActions"></vActionSheet>
     </view>
 
     <!--<vButton type="primary" bindtap="chooseLoaction">获取当前位置</vButton>-->
@@ -56,6 +57,9 @@
             <text>白天：{{ item.tem1 }}</text>
             <text>晚上：{{ item.tem2 }}</text>
         </view>
+
+        <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">空气</vDivider>
+
         <view class="quality" wx:if="{{ item.air > 0 }}">
           <text>空气质量：</text>
           <view class="quality-content" wx:if="{{ item.air > 0 && item.air <= 50 }}">
@@ -74,7 +78,9 @@
         <view class="quality-desc">
           <em>{{ item.air_tips }}</em>
         </view>
-        
+
+        <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">今天</vDivider>
+
         <view class="wether-hours">
           <scroll-view class="wether-hours-content" scroll-x="true">
             <view class="hour" wx:for="{{ item.hours }}" wx:for-item="item" wx:for-index="index" wx:key="{{ index }}">
@@ -90,7 +96,19 @@
             </view>
           </scroll-view>
         </view>
+
+        <view class="other-desc">
+          <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">指标描述</vDivider>
+          <view class="other-desc-content" wx:for="{{ item.index }}" wx:for-item="data" wx:for-index="index" wx:key="{{ index }}">
+            <vPanel wx:if="{{ data.level !== null }}" title="{{ data.title }}" status="{{ data.level }}">
+              <view class="panel-content">{{ data.desc }}</view>
+            </vPanel>
+          </view>
+        </view>
+
+        <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">后六天</vDivider>
       </view>
+
       <view class="wether-next-six" wx:else>
         <view class="date-next">{{ item.day }}</view>
         <view class="wea_img-next">
@@ -100,6 +118,8 @@
         <view class="tem-day-next">{{ item.tem1 }}</view>
         <view class="tem-night-next">{{ item.tem2 }}</view>
       </view>
+
+      
     </view>
   </view>
 </view>

@@ -48,6 +48,8 @@
     "vTag": "/miniprogram_npm/vant-weapp/tag/index",
     "vRow": "/miniprogram_npm/vant-weapp/row/index",
     "vCol": "/miniprogram_npm/vant-weapp/col/index",
-    "vLoading": "/miniprogram_npm/vant-weapp/loading/index"
+    "vLoading": "/miniprogram_npm/vant-weapp/loading/index",
+    "vDivider": "/miniprogram_npm/vant-weapp/divider/index",
+    "vPanel": "/miniprogram_npm/vant-weapp/panel/index"
   }
 }

@@ -180,11 +180,21 @@ Page({
             this.setData({
               loading: false
             });
+          },
+          complete: () => {
+            this.setData({
+              loading: false
+            });
           }
         });
       },
       fail: err => {
         console.log(err);
+        this.setData({
+          loading: false
+        });
+      },
+      complete: () => {
         this.setData({
           loading: false
         });
