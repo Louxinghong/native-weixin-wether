@@ -292,6 +292,7 @@ Page({
   lookGet: function() {
     wx.openSetting({
       success: res => {
+        // console.log(res);
         if (res.authSetting["scope.userInfo"]) {
           this.setData({
             hasUserInfo: true
@@ -301,7 +302,7 @@ Page({
             hasUserInfo: false
           });
         }
-        if (res.authSetting["scope.locationInfo"]) {
+        if (res.authSetting["scope.userLocation"]) {
           this.setData({
             hasLocationInfo: true
           });
