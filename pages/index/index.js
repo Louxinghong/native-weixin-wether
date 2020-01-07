@@ -363,6 +363,7 @@ Page({
   },
   onPageScroll: function(res) {
     // res.scrollTop 当前滚轮滚动长度
+    // console.log(res)
     if (this.data.scrollTopLast < res.scrollTop) {
       this.setData({
         fontSize:
