@@ -77,9 +77,19 @@
 }
 
 .wether .wether-today .tem-now {
-  font-size: 130rpx;
+  /* font-size: 130rpx; */
   text-align: center;
   margin-top: 20rpx;
+}
+
+.wether .wether-today .tem-change {
+  /* font-size: 130rpx; */
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 5px #999;
+  z-index: 999;
 }
 
 .wether .wether-today .wether-now {

@@ -45,7 +45,12 @@ Page({
     startX: 0,
     startY: 0,
     moveX: 0,
-    moveY: 0
+    moveY: 0,
+    scrollTop: 0,
+    scrollTopLast: 0,
+    maxFontSize: 130,
+    minFontSize: 80,
+    fontSize: 130
   },
   //事件处理函数
   bindViewTap: function() {
@@ -355,5 +360,28 @@ Page({
     //     console.log("画面向上");
     //   }
     // }
+  },
+  onPageScroll: function(res) {
+    // res.scrollTop 当前滚轮滚动长度
+    if (this.data.scrollTopLast < res.scrollTop) {
+      this.setData({
+        fontSize:
+          this.data.fontSize > this.data.minFontSize
+            ? this.data.fontSize - 5
+            : this.data.minFontSize
+      });
+    } else if (this.data.scrollTopLast > res.scrollTop && res.scrollTop <= 80) {
+      this.setData({
+        fontSize:
+          this.data.fontSize < this.data.maxFontSize
+            ? this.data.fontSize + 5
+            : this.data.maxFontSize
+      });
+    }
+
+    this.setData({
+      scrollTop: res.scrollTop,
+      scrollTopLast: res.scrollTop
+    });
   }
 });

@@ -44,7 +44,7 @@
 
     <view class="wether" wx:for="{{ daysInfo }}" wx:for-item="item" wx:for-index="index" wx:key="{{ index }}">
       <view class="wether-today" wx:if="{{ index === 0 }}">
-        <view class="tem-now">
+        <view class="{{ scrollTop < 100 ? 'tem-now' : 'tem-change' }}" style="font-size: {{ fontSize }}rpx">
           <text>{{ item.tem }}</text>
         </view>
         <view class="wether-now">
