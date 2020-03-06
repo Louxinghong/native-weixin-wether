@@ -1,5 +1,12 @@
 {
-  "pages": ["pages/index/index", "pages/logs/logs", "pages/test/test"],
+  "pages": [
+    "pages/home/home",
+    "pages/monetary/monetary",
+    "pages/insurance/insurance",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
@@ -16,22 +23,34 @@
     "selectedColor": "#FF0000",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "天气",
+        "pagePath": "pages/home/home",
+        "text": "首页",
         "iconPath": "./images/tab_wether.png",
         "selectedIconPath": "./images/tab_wether_selected.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志",
-        "iconPath": "./images/tab_logs.png",
-        "selectedIconPath": "./images/tab_logs_selected.png"
+        "pagePath": "pages/index/index",
+        "text": "金融",
+        "iconPath": "./images/tab_wether.png",
+        "selectedIconPath": "./images/tab_wether_selected.png"
       },
       {
-        "pagePath": "pages/test/test",
-        "text": "测试",
-        "iconPath": "./images/tab_test.png",
-        "selectedIconPath": "./images/tab_test_selected.png"
+        "pagePath": "pages/index/index",
+        "text": "保险",
+        "iconPath": "./images/tab_wether.png",
+        "selectedIconPath": "./images/tab_wether_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "./images/tab_wether.png",
+        "selectedIconPath": "./images/tab_wether_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "天气",
+        "iconPath": "./images/tab_wether.png",
+        "selectedIconPath": "./images/tab_wether_selected.png"
       }
     ]
   },
