@@ -1,3 +1,30 @@
 <view>
-  <text>Home</text>
+  <view>
+    <swiper
+      indicator-dots="{{ indicatorDots }}"
+      autoplay="{{ autoplay }}"
+      interval="{{ interval }}"
+      duration="{{ duration }}"
+      circular="true"
+    >
+      <block
+        wx:for="{{ background }}"
+        wx:for-index="index"
+        wx:key="{{ index }}"
+      >
+        <swiper-item>
+          <view class="swiper-item {{ item }}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="loan-content">
+      <vNoticeBar
+        class="notice"
+        left-icon="info"
+        text="重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知"
+      ></vNoticeBar>
+      <input class="money" type="text" placeholder="请输入金额" />
+      <button type="warn">我要借款</button>
+    </view>
+  </view>
 </view>

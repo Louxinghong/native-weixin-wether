@@ -1,6 +1,10 @@
 <!--index.wxml-->
-<view class="container" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove">
-  <image class='background' src="../../images/bg.jpg" mode="aspectFill"></image>
+<view
+  class="container"
+  bindtouchstart="handleTouchStart"
+  bindtouchmove="handleTouchMove"
+>
+  <image class="background" src="../../images/bg.jpg" mode="aspectFill"></image>
   <!--<view class="userinfo" wx:if="{{ hasUserInfo }}">
     <image bindtap="bindViewTap" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" mode="cover"></image>
   </view>
@@ -26,7 +30,12 @@
       </view>
 
       <vIcon class="setting" name="setting-o" bind:tap="onShowActions"></vIcon>
-      <vActionSheet show="{{ showActions }}" actions="{{ actions }}" bind:close="onCloseActions" bind:select="onSelectActions"></vActionSheet>
+      <vActionSheet
+        show="{{ showActions }}"
+        actions="{{ actions }}"
+        bind:close="onCloseActions"
+        bind:select="onSelectActions"
+      ></vActionSheet>
     </view>
 
     <!--<vButton type="primary" bindtap="chooseLoaction">获取当前位置</vButton>-->
@@ -34,7 +43,13 @@
     <!--此处添加vToast相当于一个占位符-->
     <vToast id="van-toast"></vToast>
 
-    <vSearch label="城市" value="{{ searchCity }}" placeholder="请输入需查询的城市名称" use-action-slot bind:change="onChangeCity">
+    <vSearch
+      label="城市"
+      value="{{ searchCity }}"
+      placeholder="请输入需查询的城市名称"
+      use-action-slot
+      bind:change="onChangeCity"
+    >
       <view slot="action" bind:tap="onSearchCity">搜索</view>
     </vSearch>
 
@@ -42,33 +57,58 @@
       <vLoading color="#1989fa" size="100rpx"></vLoading>
     </view>
 
-    <view class="wether" wx:for="{{ daysInfo }}" wx:for-item="item" wx:for-index="index" wx:key="{{ index }}">
+    <view
+      class="wether"
+      wx:for="{{ daysInfo }}"
+      wx:for-item="item"
+      wx:for-index="index"
+      wx:key="{{ index }}"
+    >
       <view class="wether-today" wx:if="{{ index === 0 }}">
-        <view class="{{ scrollTop < 100 ? 'tem-now' : 'tem-change' }}" style="font-size: {{ fontSize }}rpx">
+        <view
+          class="{{ scrollTop < 100 ? 'tem-now' : 'tem-change' }}"
+          style="font-size:{{ fontSize }};"
+        >
           <text>{{ item.tem }}</text>
         </view>
         <view class="wether-now">
-          <image class="wether-now-image" src="../../images/{{ item.wea_img }}.png"></image>
+          <image
+            class="wether-now-image"
+            src="../../images/{{ item.wea_img }}.png"
+          ></image>
           <vTag round size="large">{{ item.wea }}</vTag>
         </view>
         <view class="date-tem">
-            <text>{{ item.week }}</text>
-            <text>{{ item.day }}</text>
-            <text>白天：{{ item.tem1 }}</text>
-            <text>晚上：{{ item.tem2 }}</text>
+          <text>{{ item.week }}</text>
+          <text>{{ item.day }}</text>
+          <text>白天：{{ item.tem1 }}</text>
+          <text>晚上：{{ item.tem2 }}</text>
         </view>
 
-        <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">空气</vDivider>
+        <vDivider
+          contentPosition="center"
+          customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;"
+          >空气</vDivider
+        >
 
         <view class="quality" wx:if="{{ item.air > 0 }}">
           <text>空气质量：</text>
-          <view class="quality-content" wx:if="{{ item.air > 0 && item.air <= 50 }}">
+          <view
+            class="quality-content"
+            wx:if="{{ item.air > 0 && item.air <= 50 }}"
+          >
             <vTag color="green" size="large">{{ item.air_level }}</vTag>
           </view>
-          <view class="quality-content" wx:if="{{ item.air > 50 && item.air <= 100 }}">
+          <view
+            class="quality-content"
+            wx:if="{{ item.air > 50 && item.air <= 100 }}"
+          >
             <vTag plain color="yellow" size="large">{{ item.air_level }}</vTag>
           </view>
-          <view class="quality-content" wx:if="{{ item.air > 100 && item.air <= 150 }}">
+          <view
+            class="quality-content"
+            wx:if="{{ item.air > 100 && item.air <= 150 }}"
+          >
             <vTag color="orange" size="large">{{ item.air_level }}</vTag>
           </view>
           <view class="quality-content" wx:if="{{ item.air > 151 }}">
@@ -79,11 +119,21 @@
           <em>{{ item.air_tips }}</em>
         </view>
 
-        <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">今天</vDivider>
+        <vDivider
+          contentPosition="center"
+          customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;"
+          >今天</vDivider
+        >
 
         <view class="wether-hours">
           <scroll-view class="wether-hours-content" scroll-x="true">
-            <view class="hour" wx:for="{{ item.hours }}" wx:for-item="item" wx:for-index="index" wx:key="{{ index }}">
+            <view
+              class="hour"
+              wx:for="{{ item.hours }}"
+              wx:for-item="item"
+              wx:for-index="index"
+              wx:key="{{ index }}"
+            >
               <view class="hour-day">{{ item.day }}</view>
               <view>
                 <image class="hour-wea-img" src="{{ item.wea_img }}"></image>
@@ -98,28 +148,47 @@
         </view>
 
         <view class="other-desc">
-          <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">指标描述</vDivider>
-          <view class="other-desc-content" wx:for="{{ item.index }}" wx:for-item="data" wx:for-index="index" wx:key="{{ index }}">
-            <vPanel wx:if="{{ data.level !== null }}" title="{{ data.title }}" status="{{ data.level }}">
+          <vDivider
+            contentPosition="center"
+            customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;"
+            >指标描述</vDivider
+          >
+          <view
+            class="other-desc-content"
+            wx:for="{{ item.index }}"
+            wx:for-item="data"
+            wx:for-index="index"
+            wx:key="{{ index }}"
+          >
+            <vPanel
+              wx:if="{{ data.level !== null }}"
+              title="{{ data.title }}"
+              status="{{ data.level }}"
+            >
               <view class="panel-content">{{ data.desc }}</view>
             </vPanel>
           </view>
         </view>
 
-        <vDivider contentPosition="center" customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;">后六天</vDivider>
+        <vDivider
+          contentPosition="center"
+          customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;"
+          >后六天</vDivider
+        >
       </view>
 
       <view class="wether-next-six" wx:else>
         <view class="date-next">{{ item.day }}</view>
         <view class="wea_img-next">
-          <image class="wea_img-next-content" src="../../images/{{ item.wea_img }}.png"></image>
+          <image
+            class="wea_img-next-content"
+            src="../../images/{{ item.wea_img }}.png"
+          ></image>
         </view>
         <view class="wea-next">{{ item.wea }}</view>
         <view class="tem-day-next">{{ item.tem1 }}</view>
         <view class="tem-night-next">{{ item.tem2 }}</view>
       </view>
-
-      
     </view>
   </view>
 </view>

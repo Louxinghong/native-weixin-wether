@@ -25,26 +25,26 @@
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "./images/tab_wether.png",
-        "selectedIconPath": "./images/tab_wether_selected.png"
+        "iconPath": "./images/tab_home.png",
+        "selectedIconPath": "./images/tab_home_selected.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/monetary/monetary",
         "text": "金融",
-        "iconPath": "./images/tab_wether.png",
-        "selectedIconPath": "./images/tab_wether_selected.png"
+        "iconPath": "./images/tab_monetary.png",
+        "selectedIconPath": "./images/tab_monetary_selected.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/insurance/insurance",
         "text": "保险",
-        "iconPath": "./images/tab_wether.png",
-        "selectedIconPath": "./images/tab_wether_selected.png"
+        "iconPath": "./images/tab_insurance.png",
+        "selectedIconPath": "./images/tab_insurance_selected.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "./images/tab_wether.png",
-        "selectedIconPath": "./images/tab_wether_selected.png"
+        "iconPath": "./images/tab_my.png",
+        "selectedIconPath": "./images/tab_my_selected.png"
       },
       {
         "pagePath": "pages/index/index",
@@ -69,6 +69,7 @@
     "vCol": "/miniprogram_npm/vant-weapp/col/index",
     "vLoading": "/miniprogram_npm/vant-weapp/loading/index",
     "vDivider": "/miniprogram_npm/vant-weapp/divider/index",
-    "vPanel": "/miniprogram_npm/vant-weapp/panel/index"
+    "vPanel": "/miniprogram_npm/vant-weapp/panel/index",
+    "vNoticeBar": "/miniprogram_npm/vant-weapp/notice-bar/index"
   }
 }

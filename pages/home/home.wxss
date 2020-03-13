@@ -1,0 +1,37 @@
+.swiper-item {
+  height: 100%;
+}
+
+.picOne {
+  background: crimson;
+}
+
+.picTwo {
+  background-color: black;
+}
+
+.picThree {
+  background-color: aqua;
+}
+
+.loan-content {
+  width: 90%;
+  height: 600rpx;
+  box-shadow: 0 0 20px 5px rgba(214, 214, 213, 0.75);
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.notice {
+  width: 100%;
+}
+.money {
+  display: block;
+  width: 80%;
+  padding: 20rpx 5rpx;
+  border: 2rpx solid rgb(165, 164, 164);
+  border-radius: 10rpx;
+  text-align: center;
+}

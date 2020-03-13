@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    ".postcssrc": "json",
+    ".stylelintrc": "json",
+    "*.wxml": "html",
+    "*.wxss": "css"
+  }
+}
