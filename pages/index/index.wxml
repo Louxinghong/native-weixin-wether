@@ -67,7 +67,7 @@
       <view class="wether-today" wx:if="{{ index === 0 }}">
         <view
           class="{{ scrollTop < 100 ? 'tem-now' : 'tem-change' }}"
-          style="font-size:{{ fontSize }};"
+          style="font-size:{{ fontSize }}rpx;"
         >
           <text>{{ item.tem }}</text>
         </view>

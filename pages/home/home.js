@@ -1,3 +1,5 @@
+import Toast from "../../miniprogram_npm/vant-weapp/toast/toast";
+
 Page({
   data: {
     indicatorDots: true,
@@ -5,5 +7,13 @@ Page({
     interval: 3000,
     duration: 1500,
     background: ["picOne", "picTwo", "picThree"]
+  },
+  goToLoan() {
+    Toast("请先登录");
+  },
+  goToWithdraw() {
+    wx.navigateTo({
+      url: "/pages/index/index"
+    });
   }
 });

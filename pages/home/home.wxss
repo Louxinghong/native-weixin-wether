@@ -1,3 +1,11 @@
+.container {
+  padding-bottom: 40rpx;
+}
+
+.pic-list {
+  height: 350rpx !important;
+}
+
 .swiper-item {
   height: 100%;
 }
@@ -16,22 +24,69 @@
 
 .loan-content {
   width: 90%;
-  height: 600rpx;
+  height: 660rpx;
   box-shadow: 0 0 20px 5px rgba(214, 214, 213, 0.75);
   margin: 20rpx auto;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
 }
+
 .notice {
+  margin-bottom: 20rpx;
   width: 100%;
 }
+.most-loan-word {
+  margin-bottom: 10rpx;
+  color: rgb(136, 136, 136);
+  font-size: 35rpx;
+}
+.most-money {
+  font-size: 100rpx;
+  font-weight: 600;
+}
+.line {
+  margin-bottom: 10rpx;
+  width: 80%;
+}
 .money {
+  margin-bottom: 30rpx;
   display: block;
   width: 80%;
   padding: 20rpx 5rpx;
   border: 2rpx solid rgb(165, 164, 164);
   border-radius: 10rpx;
   text-align: center;
+}
+
+.loan-btn {
+  margin-bottom: 20rpx;
+  display: block;
+  width: 80% !important;
+}
+
+.other-list {
+  width: 90%;
+  height: 150rpx;
+  box-shadow: 0 0 20px 5px rgba(214, 214, 213, 0.75);
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.other-list-item {
+  text-align: center;
+}
+
+.list-item-img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.list-item-word {
+  font-size: 28rpx;
 }

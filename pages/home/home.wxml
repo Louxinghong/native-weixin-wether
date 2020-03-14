@@ -1,6 +1,7 @@
 <view>
-  <view>
+  <view class="container">
     <swiper
+      class="pic-list"
       indicator-dots="{{ indicatorDots }}"
       autoplay="{{ autoplay }}"
       interval="{{ interval }}"
@@ -23,8 +24,36 @@
         left-icon="info"
         text="重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知"
       ></vNoticeBar>
+      <span class="most-loan-word">最高可借(元)</span>
+      <span class="most-money">500000</span>
+      <vDivider
+        class="line"
+        contentPosition="center"
+        customStyle="color: rgb(136, 136, 136);border-color: rgb(136, 136, 136);font-size: 30rpx;"
+        >我要借款</vDivider
+      >
       <input class="money" type="text" placeholder="请输入金额" />
-      <button type="warn">我要借款</button>
+      <button class="loan-btn" type="warn" bindtap="goToLoan">借款</button>
+      <!--此处添加vToast相当于一个占位符-->
+      <vToast id="van-toast"></vToast>
+    </view>
+    <view class="other-list">
+      <view class="other-list-item" bindtap="goToWithdraw">
+        <image class="list-item-img" src="../../images/withdraw.png"></image>
+        <view class="list-item-word">提额</view>
+      </view>
+      <view class="other-list-item">
+        <image class="list-item-img" src="../../images/partner.png"></image>
+        <view class="list-item-word">合伙人</view>
+      </view>
+      <view class="other-list-item">
+        <image class="list-item-img" src="../../images/financial.png"></image>
+        <view class="list-item-word">金融</view>
+      </view>
+      <view class="other-list-item">
+        <image class="list-item-img" src="../../images/calculation.png"></image>
+        <view class="list-item-word">贷款计算</view>
+      </view>
     </view>
   </view>
 </view>

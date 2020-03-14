@@ -45,12 +45,6 @@
         "text": "我的",
         "iconPath": "./images/tab_my.png",
         "selectedIconPath": "./images/tab_my_selected.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "天气",
-        "iconPath": "./images/tab_wether.png",
-        "selectedIconPath": "./images/tab_wether_selected.png"
       }
     ]
   },
