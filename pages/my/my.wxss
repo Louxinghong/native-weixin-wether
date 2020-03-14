@@ -1,0 +1,74 @@
+.container {
+  height: 100%;
+}
+
+.my-info-details {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.my-info-details image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 30rpx;
+}
+.wx_avatar {
+  border-radius: 50%;
+}
+
+.loan-details {
+  width: 90%;
+  height: 300rpx;
+  background-color: rgb(252, 104, 85);
+  margin: 10rpx auto;
+  border-radius: 15rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.loan-details-word {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.my-list {
+  display: flex;
+  width: 100%;
+  margin-top: 20rpx;
+  justify-content: space-around;
+  align-items: center;
+}
+.my-list-item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.my-list-item image {
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.my-list-item text {
+  font-size: 28rpx;
+}
+
+.other-items {
+  margin-top: 30rpx;
+}
+
+.van-cell-text {
+  display: flex;
+  align-items: center;
+}
+
+.van-cell-text image {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 30rpx;
+}

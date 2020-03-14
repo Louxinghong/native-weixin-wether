@@ -64,6 +64,8 @@
     "vLoading": "/miniprogram_npm/vant-weapp/loading/index",
     "vDivider": "/miniprogram_npm/vant-weapp/divider/index",
     "vPanel": "/miniprogram_npm/vant-weapp/panel/index",
-    "vNoticeBar": "/miniprogram_npm/vant-weapp/notice-bar/index"
+    "vNoticeBar": "/miniprogram_npm/vant-weapp/notice-bar/index",
+    "vCell": "/miniprogram_npm/vant-weapp/cell/index",
+    "vCellGroup": "/miniprogram_npm/vant-weapp/cell-group/index"
   }
 }
