@@ -1,0 +1,8 @@
+<view>
+  <view class="container">
+    <view class="bg"></view>
+    <view class="product-detail"></view>
+    <view class="apply-condition"></view>
+    <view class="apply-btn">立即申请</view>
+  </view>
+</view>

@@ -38,11 +38,14 @@ Page({
 
   onLogin: function(e) {
     console.log(e);
-    app.globalData.userInfo = e.detail.userInfo;
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    });
-    console.log(this.data.userInfo);
+    if (e.detail.errMsg === "getUserInfo:fail auth deny") {
+      console.log(e.detail.errMsg);
+    } else {
+      app.globalData.userInfo = e.detail.userInfo;
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      });
+    }
   }
 });

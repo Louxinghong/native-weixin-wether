@@ -1,0 +1,78 @@
+.contianer {
+  height: 100%;
+}
+
+.bg {
+  width: 100%;
+  height: 300rpx;
+  background-color: crimson;
+}
+
+.notice {
+  width: 100%;
+}
+
+.products {
+  padding: 20rpx;
+}
+
+.product {
+  padding: 20rpx;
+  width: 100%;
+  /* height: 300rpx; */
+}
+
+.product:not(:first-child) {
+  border-top: 2rpx solid rgb(194, 194, 194);
+}
+
+.product-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35rpx;
+}
+
+.loan-pic {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 30rpx;
+}
+
+.loan-name {
+  font-size: 40rpx;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loan-range {
+  font-size: 35rpx;
+  color: crimson;
+  font-weight: 700;
+}
+
+.loan-rangeWord {
+  font-size: 26rpx;
+  color: rgb(194, 194, 194);
+}
+
+.product-notice {
+  border-left: 2rpx solid rgb(206, 204, 205);
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: rgb(194, 194, 194);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.loan-apply {
+  background: linear-gradient(to right, rgb(253, 204, 70), #ff3e03);
+  color: #fff;
+  border-radius: 20rpx;
+  padding: 15rpx 20rpx;
+  font-size: 25rpx;
+}

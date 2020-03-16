@@ -1,0 +1,39 @@
+<view>
+  <view class="container">
+    <view class="bg"></view>
+    <view class="notice">
+      <vNoticeBar
+        left-icon="info"
+        text="重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知重要的通知"
+      ></vNoticeBar>
+    </view>
+    <view class="products">
+      <view
+        class="product"
+        wx:for="{{ products }}"
+        wx:for-item="item"
+        wx:for-index="index"
+        wx:key="{{ index }}"
+        bindtap="onGotoMonetaryApply"
+        data-id="{{ item.id }}"
+      >
+        <view class="product-head">
+          <image class="loan-pic" src="{{ item.pic }}"></image>
+          <text class="loan-name">{{ item.name }}</text>
+        </view>
+        <view class="product-info">
+          <view class="product-range">
+            <view class="loan-range">{{ item.range }}</view>
+            <view class="loan-rangeWord">{{ item.rangeWord }}</view>
+          </view>
+          <view class="product-notice">
+            <view>{{ item.noticeOne }}</view>
+            <view>{{ item.noticeTwo }}</view>
+            <view>{{ item.noticeThree }}</view>
+          </view>
+          <view class="loan-apply">立即申请</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -5,7 +5,8 @@
     "pages/insurance/insurance",
     "pages/my/my",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/monetary-apply/monetary-apply"
   ],
   "permission": {
     "scope.userLocation": {
