@@ -1,0 +1,30 @@
+<view>
+  <view class="container">
+    <view
+      class="insurance"
+      wx:for="{{ products }}"
+      wx:for-item="item"
+      wx:for-index="index"
+      wx:for-key="{{ index }}"
+      wx:if="{{ index <= showNumbers }}"
+    >
+      <image class="insurance-image" src="{{ item.img }}"></image>
+      <view class="insurance-detail">
+        <view class="insurance-word">
+          <text class="insurance-name">{{ item.name }}</text>
+          <vTag round size="medium">{{ item.tag }}</vTag>
+          <view class="insurance-desc">{{ item.description }}</view>
+        </view>
+        <!--此处添加vToast相当于一个占位符-->
+        <vToast id="van-toast"></vToast>
+        <vTag plain size="large" color="#f2826a" bindtap="onShowDetail"
+          >查看详情</vTag
+        >
+      </view>
+    </view>
+    <view class="loading" hidden="{{ !isShowLoading }}">
+      <vLoading></vLoading>
+    </view>
+    <view class="all-show"></view>
+  </view>
+</view>

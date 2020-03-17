@@ -9,7 +9,7 @@ Page({
     background: ["picOne", "picTwo", "picThree"]
   },
   goToLoan() {
-    Toast("请先登录");
+    Toast("借个锤子借");
   },
   goToWithdraw() {
     wx.navigateTo({
