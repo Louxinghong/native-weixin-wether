@@ -4,6 +4,5 @@
   "navigationBarTitleText": "金融申请",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",
-  "enablePullDownRefresh": true,
-  "navigationStyle": "custom"
+  "enablePullDownRefresh": true
 }

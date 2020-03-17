@@ -1,8 +1,51 @@
 <view>
   <view class="container">
-    <view class="bg"></view>
-    <view class="product-detail"></view>
-    <view class="apply-condition"></view>
-    <view class="apply-btn">立即申请</view>
+    <view class="product-content">
+      <view class="bg"></view>
+      <view class="product-detail">
+        <view
+          class="product-detail-item"
+          wx:for="{{ product.detail }}"
+          wx:for-item="item"
+          wx:for-index="index"
+          wx:key="{{ index }}"
+        >
+          <text class="detail-value">{{ item.value }}</text>
+          <text class="detail-label">{{ item.label }}</text>
+        </view>
+      </view>
+      <view class="apply-condition">
+        <view
+          class="apply-condition-item"
+          wx:for="{{ product.conditions }}"
+          wx:for-item="item"
+          wx:for-index="index"
+          wx:key="{{ index }}"
+        >
+          <view>
+            <image
+              class="condition-image"
+              src="../../images/process.png"
+            ></image>
+          </view>
+          <view class="condition-word">
+            <text class="condition-label">{{ item.label }}</text>
+            <rich-text
+              class="condition-value"
+              nodes="{{ item.value }}"
+            ></rich-text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="notice">
+      <view class="notice-word">
+        温馨提醒：您的贷款由第三方发放，请务必本人操作并提供真实信息。您获得
+        借款后请按时还款，否则会影响您的信用记录。
+      </view>
+    </view>
+    <!--此处添加vToast相当于一个占位符-->
+    <vToast id="van-toast"></vToast>
+    <view class="apply-btn" bindtap="onApply">立即申请</view>
   </view>
 </view>

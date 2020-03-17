@@ -1,5 +1,5 @@
 /**
- * 金融产品数据
+ * 金融产品本地数据
  */
 export const monetaryProducts = [
   {
@@ -10,7 +10,42 @@ export const monetaryProducts = [
     rangeWord: "额度范围(元)",
     noticeOne: "9小时放款",
     noticeTwo: "月利率2.99%",
-    noticeThree: "贷款期限最长12个月"
+    noticeThree: "贷款期限最长12个月",
+    detail: {
+      quota: {
+        value: "最高10万",
+        label: "额度"
+      },
+      dailyRate: {
+        value: "低至0.016%",
+        label: "日费率"
+      },
+      term: {
+        value: "7天 - 24个月",
+        label: "期限"
+      }
+    },
+    conditions: {
+      apply: {
+        value: "22 - 60周岁",
+        label: "申请条件"
+      },
+      process: {
+        value: "公务员、事业单位、世界500强等优质企业员工",
+        label: "贷款流程"
+      },
+      description: {
+        value: `
+          <div>
+            1.入职三个月以上的正式员工
+          </div>
+          <div>
+            2.在本地缴纳公积金基数大于50000
+          </div>
+        `,
+        label: "借款说明"
+      }
+    }
   },
   {
     id: 2,
@@ -20,6 +55,34 @@ export const monetaryProducts = [
     rangeWord: "额度范围(元)",
     noticeOne: "9小时放款",
     noticeTwo: "月利率2.99%",
-    noticeThree: "贷款期限最长12个月"
+    noticeThree: "贷款期限最长12个月",
+    detail: {
+      quota: {
+        value: "",
+        label: "额度"
+      },
+      dailyRate: {
+        value: "",
+        label: "日费率"
+      },
+      term: {
+        value: "",
+        label: "期限"
+      }
+    },
+    conditions: {
+      apply: {
+        value: "",
+        label: "申请条件"
+      },
+      process: {
+        value: "",
+        label: "贷款流程"
+      },
+      description: {
+        value: "",
+        label: "借款说明"
+      }
+    }
   }
 ];
