@@ -9,13 +9,8 @@ Page({
     isShowLoading: false,
     isAllShow: false
   },
-  onLoad() {
-    this.setData({
-      showNumbers: 2,
-      isShowLoading: false,
-      isAllShow: false
-    });
-  },
+  onLoad() {},
+  onShow() {},
   onShowDetail() {
     Toast("看个锤子看");
   },
