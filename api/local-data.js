@@ -132,5 +132,47 @@ export const insuranceProducts = [
     tag: "憨憨",
     description: "只有憨包才能投的保",
     img: "../../images/insurance_product.png"
+  },
+  {
+    id: 6,
+    name: "憨包保",
+    tag: "憨憨",
+    description: "只有憨包才能投的保",
+    img: "../../images/insurance_product.png"
+  },
+  {
+    id: 7,
+    name: "憨包保",
+    tag: "憨憨",
+    description: "只有憨包才能投的保",
+    img: "../../images/insurance_product.png"
+  },
+  {
+    id: 8,
+    name: "憨包保",
+    tag: "憨憨",
+    description: "只有憨包才能投的保",
+    img: "../../images/insurance_product.png"
+  },
+  {
+    id: 9,
+    name: "憨包保",
+    tag: "憨憨",
+    description: "只有憨包才能投的保",
+    img: "../../images/insurance_product.png"
+  },
+  {
+    id: 10,
+    name: "憨包保",
+    tag: "憨憨",
+    description: "只有憨包才能投的保",
+    img: "../../images/insurance_product.png"
+  },
+  {
+    id: 11,
+    name: "憨包保",
+    tag: "憨憨",
+    description: "只有憨包才能投的保",
+    img: "../../images/insurance_product.png"
   }
 ];

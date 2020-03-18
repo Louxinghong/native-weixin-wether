@@ -5,7 +5,7 @@
       wx:for="{{ products }}"
       wx:for-item="item"
       wx:for-index="index"
-      wx:for-key="{{ index }}"
+      wx:key="{{ index }}"
       wx:if="{{ index <= showNumbers }}"
     >
       <image class="insurance-image" src="{{ item.img }}"></image>
@@ -23,8 +23,7 @@
       </view>
     </view>
     <view class="loading" hidden="{{ !isShowLoading }}">
-      <vLoading></vLoading>
+      <vLoading color="#1989fa" size="90rpx"></vLoading>
     </view>
-    <view class="all-show"></view>
   </view>
 </view>

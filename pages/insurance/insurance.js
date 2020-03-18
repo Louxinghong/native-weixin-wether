@@ -9,13 +9,38 @@ Page({
     isShowLoading: false,
     isAllShow: false
   },
+  onLoad() {
+    this.setData({
+      showNumbers: 2,
+      isShowLoading: false,
+      isAllShow: false
+    });
+  },
   onShowDetail() {
     Toast("看个锤子看");
   },
   onReachBottom() {
-    Toast("上拉");
     this.setData({
       isShowLoading: true
     });
+    if (this.data.showNumbers + 1 < this.data.allProducts) {
+      setTimeout(() => {
+        this.setData({
+          isShowLoading: false,
+          showNumbers:
+            this.data.showNumbers + 2 >= this.data.allProducts
+              ? this.data.allProducts
+              : this.data.showNumbers + 2
+        });
+      }, 3000);
+    } else {
+      setTimeout(() => {
+        this.setData({
+          isShowLoading: false,
+          isAllShow: true
+        });
+        Toast("真的没有啦");
+      }, 3000);
+    }
   }
 });
