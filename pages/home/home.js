@@ -1,4 +1,4 @@
-import Toast from "../../miniprogram_npm/vant-weapp/toast/toast";
+import Toast from '../../miniprogram_npm/vant-weapp/toast/toast'
 
 Page({
   data: {
@@ -6,14 +6,14 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1500,
-    background: ["picOne", "picTwo", "picThree"]
+    background: ['picOne', 'picTwo', 'picThree']
   },
   goToLoan() {
-    Toast("借个锤子借");
+    Toast('借个锤子借')
   },
   goToWithdraw() {
     wx.navigateTo({
-      url: "/pages/index/index"
-    });
+      url: '/pages/index/index'
+    })
   }
-});
+})

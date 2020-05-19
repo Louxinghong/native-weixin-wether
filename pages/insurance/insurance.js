@@ -1,5 +1,5 @@
-import { insuranceProducts } from "../../api/local-data";
-import Toast from "../../miniprogram_npm/vant-weapp/toast/toast";
+import { insuranceProducts } from '../../api/local-data'
+import Toast from '../../miniprogram_npm/vant-weapp/toast/toast'
 
 Page({
   data: {
@@ -12,12 +12,12 @@ Page({
   onLoad() {},
   onShow() {},
   onShowDetail() {
-    Toast("看个锤子看");
+    Toast('看个锤子看')
   },
   onReachBottom() {
     this.setData({
       isShowLoading: true
-    });
+    })
     if (this.data.showNumbers + 1 < this.data.allProducts) {
       setTimeout(() => {
         this.setData({
@@ -26,16 +26,16 @@ Page({
             this.data.showNumbers + 2 >= this.data.allProducts
               ? this.data.allProducts
               : this.data.showNumbers + 2
-        });
-      }, 3000);
+        })
+      }, 3000)
     } else {
       setTimeout(() => {
         this.setData({
           isShowLoading: false,
           isAllShow: true
-        });
-        Toast("真的没有啦");
-      }, 3000);
+        })
+        Toast('真的没有啦')
+      }, 3000)
     }
   }
-});
+})
