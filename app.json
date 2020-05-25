@@ -4,9 +4,10 @@
     "pages/monetary/monetary",
     "pages/insurance/insurance",
     "pages/my/my",
-    "pages/index/index",
+    "pages/wether/wether",
     "pages/logs/logs",
-    "pages/monetary-apply/monetary-apply"
+    "pages/monetary-apply/monetary-apply",
+    "pages/setting/setting"
   ],
   "permission": {
     "scope.userLocation": {
@@ -69,6 +70,10 @@
     "vCell": "/miniprogram_npm/vant-weapp/cell/index",
     "vCellGroup": "/miniprogram_npm/vant-weapp/cell-group/index",
     "vTab": "/miniprogram_npm/vant-weapp/tab/index",
-    "vTabs": "/miniprogram_npm/vant-weapp/tabs/index"
+    "vTabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "vCollapse": "/miniprogram_npm/vant-weapp/collapse/index",
+    "vCollapseItem": "/miniprogram_npm/vant-weapp/collapse-item/index",
+    "vGrid": "/miniprogram_npm/vant-weapp/grid/index",
+    "vGridItem": "/miniprogram_npm/vant-weapp/grid-item/index"
   }
 }

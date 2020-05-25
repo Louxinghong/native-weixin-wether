@@ -1,0 +1,4 @@
+.van-cell-text {
+  display: flex;
+  align-items: center;
+}

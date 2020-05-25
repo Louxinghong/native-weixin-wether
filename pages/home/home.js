@@ -10,10 +10,5 @@ Page({
   },
   goToLoan() {
     Toast('借个锤子借')
-  },
-  goToWithdraw() {
-    wx.navigateTo({
-      url: '/pages/index/index'
-    })
   }
 })

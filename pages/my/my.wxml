@@ -47,6 +47,14 @@
         </vCell>
         <vCell is-link>
           <view slot="title">
+            <view class="van-cell-text" bindtap="goToPlugin">
+              <image src="../../images/plugin.png"></image>
+              <text class="">插件</text>
+            </view>
+          </view>
+        </vCell>
+        <vCell is-link>
+          <view slot="title">
             <view class="van-cell-text">
               <image src="../../images/feedback.png"></image>
               <text class="">意见反馈</text>
@@ -71,7 +79,7 @@
         </vCell>
         <vCell is-link>
           <view slot="title">
-            <view class="van-cell-text">
+            <view class="van-cell-text" bindtap="goToSetting">
               <image src="../../images/setting.png"></image>
               <text class="">设置</text>
             </view>

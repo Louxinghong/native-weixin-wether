@@ -1,0 +1,18 @@
+<view>
+  <vGrid gutter="{{ 10 }}" border="{{ false }}">
+    <vGridItem
+      wx:for="{{ plugins }}"
+      wx:for-item="item"
+      wx:for-index="index"
+      wx:key="{{ index }}"
+      url="{{ item.url }}"
+      use-slot
+    >
+      <image
+        style="width: 100%; height: 60px;"
+        src="../../images/{{ item.imgName }}.png"
+      ></image>
+      <text class="title">{{ item.title }}</text>
+    </vGridItem>
+  </vGrid>
+</view>

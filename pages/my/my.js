@@ -47,5 +47,15 @@ Page({
         hasUserInfo: true
       })
     }
+  },
+  goToSetting() {
+    wx.navigateTo({
+      url: '/pages/setting/setting'
+    })
+  },
+  goToPlugin() {
+    wx.navigateTo({
+      url: '/pages/plugin/plugin'
+    })
   }
 })

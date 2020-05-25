@@ -38,7 +38,7 @@
       <vToast id="van-toast"></vToast>
     </view>
     <view class="other-list">
-      <view class="other-list-item" bindtap="goToWithdraw">
+      <view class="other-list-item">
         <image class="list-item-img" src="../../images/withdraw.png"></image>
         <view class="list-item-word">提额</view>
       </view>

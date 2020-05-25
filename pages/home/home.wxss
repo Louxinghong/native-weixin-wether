@@ -70,7 +70,7 @@
   width: 90%;
   height: 150rpx;
   box-shadow: 0 0 20px 5px rgba(214, 214, 213, 0.75);
-  margin: 20rpx auto;
+  margin: 30rpx auto 20rpx;
   border-radius: 20rpx;
   display: flex;
   flex-flow: row nowrap;
