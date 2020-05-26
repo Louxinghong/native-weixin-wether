@@ -5,7 +5,7 @@
       wx:for="{{ products }}"
       wx:for-item="item"
       wx:for-index="index"
-      wx:key="{{ index }}"
+      wx:key="index"
       wx:if="{{ index <= showNumbers }}"
     >
       <image class="insurance-image" src="{{ item.img }}"></image>

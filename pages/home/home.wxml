@@ -10,11 +10,14 @@
     >
       <block
         wx:for="{{ background }}"
+        wx:for-item="item"
         wx:for-index="index"
-        wx:key="{{ index }}"
+        wx:key="index"
       >
         <swiper-item>
-          <view class="swiper-item {{ item }}"></view>
+          <view class="swiper-item banner">
+            <image src="../../images/{{ item }}.jpg"> </image>
+          </view>
         </swiper-item>
       </block>
     </swiper>

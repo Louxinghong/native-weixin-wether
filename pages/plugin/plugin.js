@@ -1,3 +1,5 @@
+import { topicTab } from '../../utils/util'
+
 Page({
   data: {
     plugins: [

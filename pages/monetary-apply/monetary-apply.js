@@ -2,7 +2,9 @@ import { monetaryProducts } from '../../api/local-data'
 import Toast from '../../miniprogram_npm/vant-weapp/toast/toast'
 
 Page({
-  data: {},
+  data: {
+    product: null
+  },
   onLoad(options) {
     const product = monetaryProducts.find(
       (item) => item.id === parseInt(options.id)

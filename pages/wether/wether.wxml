@@ -62,7 +62,7 @@
       wx:for="{{ daysInfo }}"
       wx:for-item="item"
       wx:for-index="index"
-      wx:key="{{ index }}"
+      wx:key="index"
     >
       <view class="wether-today" wx:if="{{ index === 0 }}">
         <view
@@ -132,7 +132,7 @@
               wx:for="{{ item.hours }}"
               wx:for-item="item"
               wx:for-index="index"
-              wx:key="{{ index }}"
+              wx:key="index"
             >
               <view class="hour-day">{{ item.day }}</view>
               <view>
@@ -158,7 +158,7 @@
             wx:for="{{ item.index }}"
             wx:for-item="data"
             wx:for-index="index"
-            wx:key="{{ index }}"
+            wx:key="index"
           >
             <vPanel
               wx:if="{{ data.level !== null }}"

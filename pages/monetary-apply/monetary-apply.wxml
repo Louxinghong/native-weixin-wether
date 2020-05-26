@@ -1,14 +1,16 @@
 <view>
   <view class="container">
     <view class="product-content">
-      <view class="bg"></view>
+      <view class="bg">
+        <image src="../../images/{{ product.imgName }}.jpg"></image>
+      </view>
       <view class="product-detail">
         <view
           class="product-detail-item"
           wx:for="{{ product.detail }}"
           wx:for-item="item"
           wx:for-index="index"
-          wx:key="{{ index }}"
+          wx:key="index"
         >
           <text class="detail-value">{{ item.value }}</text>
           <text class="detail-label">{{ item.label }}</text>
@@ -20,7 +22,7 @@
           wx:for="{{ product.conditions }}"
           wx:for-item="item"
           wx:for-index="index"
-          wx:key="{{ index }}"
+          wx:key="index"
         >
           <view>
             <image

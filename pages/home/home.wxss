@@ -10,16 +10,9 @@
   height: 100%;
 }
 
-.picOne {
-  background: crimson;
-}
-
-.picTwo {
-  background-color: black;
-}
-
-.picThree {
-  background-color: aqua;
+.banner image {
+  width: 100%;
+  height: 100%;
 }
 
 .loan-content {

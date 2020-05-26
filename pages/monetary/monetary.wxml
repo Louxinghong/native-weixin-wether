@@ -1,6 +1,8 @@
 <view>
   <view class="container">
-    <view class="bg"></view>
+    <view class="bg">
+      <image src="../../images/loan-products.jpg"></image>
+    </view>
     <view class="notice">
       <vNoticeBar
         left-icon="info"
@@ -13,12 +15,12 @@
         wx:for="{{ products }}"
         wx:for-item="item"
         wx:for-index="index"
-        wx:key="{{ index }}"
+        wx:key="index"
         bindtap="onGotoMonetaryApply"
         data-id="{{ item.id }}"
       >
         <view class="product-head">
-          <image class="loan-pic" src="{{ item.pic }}"></image>
+          <image class="loan-icon" src="{{ item.icon }}"></image>
           <text class="loan-name">{{ item.name }}</text>
         </view>
         <view class="product-info">

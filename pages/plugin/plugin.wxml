@@ -4,7 +4,7 @@
       wx:for="{{ plugins }}"
       wx:for-item="item"
       wx:for-index="index"
-      wx:key="{{ index }}"
+      wx:key="index"
       url="{{ item.url }}"
       use-slot
     >
