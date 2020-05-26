@@ -9,19 +9,9 @@ Page({
         title: '天气查询'
       },
       {
-        imgName: 'wether',
-        url: '/pages/wether/wether',
-        title: '天气查询'
-      },
-      {
-        imgName: 'wether',
-        url: '/pages/wether/wether',
-        title: '天气查询'
-      },
-      {
-        imgName: 'wether',
-        url: '/pages/wether/wether',
-        title: '天气查询'
+        imgName: 'cnode',
+        url: '/pages/cnode/cnode',
+        title: 'CNode'
       }
     ]
   }

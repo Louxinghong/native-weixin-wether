@@ -269,29 +269,28 @@ Page({
     this.setData({
       loading: true
     })
-    getWether(search)
-      .then((res) => {
-        this.setData({
-          wetherInfo: res.data,
-          daysInfo: res.data.data,
-          loading: false
-        })
-        this.data.daysInfo[0].hours.forEach((item, i) => {
-          wetherStatus.forEach((res, j) => {
-            if (item.wea.indexOf(res.label) !== -1) {
-              this.setData({
-                [`daysInfo[0].hours[${i}].wea_img`]: `../../images/${res.value}.png`
-              })
-            }
-          })
-        })
-        console.log(this.data.wetherInfo)
+    try {
+      const res = await getWether(search)
+      this.setData({
+        wetherInfo: res.data,
+        daysInfo: res.data.data,
+        loading: false
       })
-      .catch((err) => {
-        this.setData({
-          loading: false
+      this.data.daysInfo[0].hours.forEach((item, i) => {
+        wetherStatus.forEach((res, j) => {
+          if (item.wea.indexOf(res.label) !== -1) {
+            this.setData({
+              [`daysInfo[0].hours[${i}].wea_img`]: `../../images/${res.value}.png`
+            })
+          }
         })
       })
+      console.log(this.data.wetherInfo)
+    } catch (err) {
+      this.setData({
+        loading: false
+      })
+    }
   },
   // 查看所有权限
   lookGet: function () {

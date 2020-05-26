@@ -61,10 +61,10 @@
       class="wether"
       wx:for="{{ daysInfo }}"
       wx:for-item="item"
-      wx:for-index="index"
-      wx:key="index"
+      wx:for-index="i"
+      wx:key="i"
     >
-      <view class="wether-today" wx:if="{{ index === 0 }}">
+      <view class="wether-today" wx:if="{{ i === 0 }}">
         <view
           class="{{ scrollTop < 100 ? 'tem-now' : 'tem-change' }}"
           style="font-size:{{ fontSize }}rpx;"
@@ -131,8 +131,8 @@
               class="hour"
               wx:for="{{ item.hours }}"
               wx:for-item="item"
-              wx:for-index="index"
-              wx:key="index"
+              wx:for-index="j"
+              wx:key="j"
             >
               <view class="hour-day">{{ item.day }}</view>
               <view>
@@ -157,8 +157,8 @@
             class="other-desc-content"
             wx:for="{{ item.index }}"
             wx:for-item="data"
-            wx:for-index="index"
-            wx:key="index"
+            wx:for-index="z"
+            wx:key="z"
           >
             <vPanel
               wx:if="{{ data.level !== null }}"

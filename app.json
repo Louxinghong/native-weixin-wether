@@ -2,12 +2,14 @@
   "pages": [
     "pages/home/home",
     "pages/monetary/monetary",
+    "pages/monetary-apply/monetary-apply",
     "pages/insurance/insurance",
     "pages/my/my",
+    "pages/setting/setting",
+    "pages/plugin/plugin",
     "pages/wether/wether",
-    "pages/logs/logs",
-    "pages/monetary-apply/monetary-apply",
-    "pages/setting/setting"
+    "pages/cnode/cnode",
+    "pages/logs/logs"
   ],
   "permission": {
     "scope.userLocation": {

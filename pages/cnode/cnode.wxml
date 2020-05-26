@@ -1,0 +1,17 @@
+<view>
+  <vTabs active="{{ active }}" bind:change="onChange">
+    <vTab
+      wx:for="{{ topicTabs }}"
+      wx:for-item="item"
+      wx:for-index="index"
+      wx:key="index"
+      title="{{ item.label }}"
+      name="{{ item.value }}"
+    >
+      <view class="loading" wx:if="{{ loading }}">
+        <vLoading color="#1989fa" size="100rpx"></vLoading>
+      </view>
+      {{ item.label }}
+    </vTab>
+  </vTabs>
+</view>
