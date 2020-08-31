@@ -12,6 +12,11 @@ Page({
         imgName: 'cnode',
         url: '/pages/cnode/cnode',
         title: 'CNode'
+      },
+      {
+        imgName: 'bilibili',
+        url: '/pages/bilibili/bilibili',
+        title: 'Bilbili'
       }
     ]
   }

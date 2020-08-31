@@ -9,6 +9,7 @@
     "pages/plugin/plugin",
     "pages/wether/wether",
     "pages/cnode/cnode",
+    "pages/bilibili/bilibili",
     "pages/logs/logs"
   ],
   "permission": {
