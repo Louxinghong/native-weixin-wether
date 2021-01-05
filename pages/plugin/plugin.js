@@ -17,6 +17,11 @@ Page({
         imgName: 'bilibili',
         url: '/pages/bilibili/bilibili',
         title: 'Bilbili'
+      },
+      {
+        imgName: 'luck-draw',
+        url: '/pages/luck-draw/luck-draw',
+        title: 'LuckDraw'
       }
     ]
   }

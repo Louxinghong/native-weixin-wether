@@ -1,0 +1,68 @@
+.draw-content {
+  position: relative;
+  display: flex;
+  flex-flow: wrap row;
+  width: 100%;
+  padding: 0 30rpx 0;
+}
+
+.draw-content .draw {
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 30rpx 0 0 30rpx;
+  line-height: 200rpx;
+  text-align: center;
+}
+
+.draw .draw-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.draw .front {
+  background-color: crimson;
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.draw .back {
+  background-color: rgb(27, 118, 255);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.rotate .front {
+  background-color: crimson;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.rotate .back {
+  background-color: rgb(27, 118, 255);
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.choose .front {
+  background-color: crimson;
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.choose .back {
+  background-color: rgb(27, 118, 255);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.btn-rotate,
+.btn-shuffle {
+  margin-top: 20rpx;
+}

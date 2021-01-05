@@ -1,0 +1,27 @@
+<view>
+  <view class="draw-content">
+    <block
+      wx:for="{{ drawData }}"
+      wx:for-item="item"
+      wx:for-index="index"
+      wx:key="index"
+    >
+      <view
+        class="draw {{ isRotate ? 'rotate' : '' }} {{ index === chooseIndex ? 'choose' : '' }}"
+        animation="{{ item.animationData }}"
+        bindtap="onRotateItem"
+        data-value="{{ item }}"
+      >
+        <view class="draw-item front">
+          {{ item.front }}
+        </view>
+        <view class="draw-item back">
+          {{ item.back }}
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <button class="btn-rotate" type="primary" bindtap="onRotate">旋转</button>
+  <button class="btn-shuffle" type="primary" bindtap="onShuffle">打乱</button>
+</view>

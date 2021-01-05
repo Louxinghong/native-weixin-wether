@@ -10,6 +10,7 @@
     "pages/wether/wether",
     "pages/cnode/cnode",
     "pages/bilibili/bilibili",
+    "pages/luck-draw/luck-draw",
     "pages/logs/logs"
   ],
   "permission": {
